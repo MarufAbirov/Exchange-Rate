@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "tj.app.kursvalyuta"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "tj.app.kursvalyuta"
@@ -33,6 +33,9 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -45,4 +48,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("androidx.navigation:navigation-fragment:2.9.0")
+    implementation("androidx.navigation:navigation-ui:2.9.0")
 }

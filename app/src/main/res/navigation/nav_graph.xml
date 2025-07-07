@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/favorableRateFragment">
+
+    <fragment
+        android:id="@+id/favorableRateFragment"
+        android:name="tj.app.kursvalyuta.FavorableRateFragment"
+        android:label="FavorableRateFragment" >
+        <action
+            android:id="@+id/action_favorableRateFragment_to_nbtBankFragment"
+            app:destination="@id/nbtBankFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nbtBankFragment"
+        android:name="tj.app.kursvalyuta.NbtBankFragment"
+        android:label="fragment_nbt_bank"
+        tools:layout="@layout/fragment_nbt_bank" />
+</navigation>

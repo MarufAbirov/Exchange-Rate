@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="126dp"
+        android:background="#F2F2F2"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbarNBT"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="#F2F2F2"
+            android:background="#F2F2F2"
+            app:title="Курсы НБТ"
+            app:collapsedTitleTextAppearance="@style/CollapsingToolbarCollapsed"
+            app:expandedTitleTextAppearance="@style/CollapsingToolbarExpanded"
+            android:fitsSystemWindows="true">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarNBT"
+                android:layout_width="match_parent"
+                android:backgroundTint="#F2F2F2"
+                android:background="#F2F2F2"
+                app:titleTextColor="@color/black"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:backgroundTint="#EBF0ED"
+                android:layout_marginHorizontal="16dp"
+                app:cardCornerRadius="16dp"
+                android:layout_marginTop="18dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/load"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="      Конвертировать по курсу от НБТ"
+                        android:textColor="#217FBC"
+                        android:textSize="14sp"/>
+                    
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#F2F2F2"
+                android:layout_marginTop="17dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp">
+
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/rubl"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginStart="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EUR"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginStart="64dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Европейское евро"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/sfuitext_light"
+                    android:layout_marginTop="46dp"
+                    android:layout_marginStart="64dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="430943 TJS"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:layout_marginTop="33dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_gravity="end"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F2F2F2"
+                    android:layout_marginTop="78dp"
+                    />
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/usd"
+                    android:layout_marginTop="95dp"
+                    android:layout_marginStart="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="USD"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:layout_marginTop="95dp"
+                    android:layout_marginStart="64dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Доллар США"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/sfuitext_light"
+                    android:layout_marginTop="117dp"
+                    android:layout_marginStart="64dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="66640946 TJS"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:layout_marginTop="104dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_gravity="end"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F2F2F2"
+                    android:layout_marginTop="149dp"
+                    />
+
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/eur"
+                    android:layout_marginTop="170dp"
+                    android:layout_marginStart="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EUR"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:layout_marginTop="170dp"
+                    android:layout_marginStart="64dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Европейское Евро"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/sfuitext_light"
+                    android:layout_marginTop="192dp"
+                    android:layout_marginStart="64dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="66640946 TJS"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:layout_marginTop="179dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginBottom="24dp"
+                    />
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
