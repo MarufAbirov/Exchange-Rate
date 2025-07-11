@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@drawable/bg_bottom_sheet"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="32dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="12dp"
+        android:background="#C4C4C4"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выберите валюту"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_marginTop="12.5dp"/>
+
+    <LinearLayout
+        android:id="@+id/eur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="42dp"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/eur"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EUR (Европейское Евро)"
+            android:textSize="17sp"
+            android:layout_marginStart="20dp"
+            android:textColor="#DE000000"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/usd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/usd"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USD (Доллар США)"
+            android:textSize="17sp"
+            android:layout_marginStart="20dp"
+            android:textColor="#DE000000"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rubl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/rubl"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RUB (Российский рубль)"
+            android:textSize="17sp"
+            android:layout_marginStart="20dp"
+            android:textColor="#DE000000"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/somoni"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/tjs"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TJS (Таджикиский сомони)"
+            android:textSize="17sp"
+            android:layout_marginStart="20dp"
+            android:textColor="#DE000000"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

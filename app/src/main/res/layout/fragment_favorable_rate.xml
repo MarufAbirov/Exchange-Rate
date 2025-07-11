@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F2F2F2"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:background="#F2F2F2">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="126dp"
+        android:layout_height="wrap_content"
         android:background="#F2F2F2"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        android:fitsSystemWindows="true">
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/collapsing_toolbar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:contentScrim="#F2F2F2"
+            android:layout_height="126dp"
             android:background="#F2F2F2"
-            app:title="Выгодный курс"
             android:fitsSystemWindows="true"
             app:collapsedTitleTextAppearance="@style/CollapsingToolbarCollapsed"
-            app:expandedTitleTextAppearance="@style/CollapsingToolbarExpanded">
+            app:contentScrim="#F2F2F2"
+            app:expandedTitleTextAppearance="@style/CollapsingToolbarExpanded"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:title="Выгодный курс">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:backgroundTint="#F2F2F2"
-                app:titleTextColor="@color/black"
                 android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin" />
+                android:backgroundTint="#F2F2F2"
+                app:layout_collapseMode="pin"
+                app:titleTextColor="@color/black" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
@@ -47,104 +47,113 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#2C8F63"
-            app:cardCornerRadius="16dp"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginVertical="12dp"
-            android:background="#2C8F63">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardhumo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="16dp"
+                android:elevation="8dp"
+                app:cardCornerRadius="16dp">
 
-            <ImageView
-                android:layout_width="70dp"
-                android:layout_height="24dp"
-                android:src="@drawable/alif"
-                android:layout_marginTop="23dp"
-                android:layout_marginStart="22dp"/>
-            
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="25dp"
-                android:src="@drawable/share"
-                android:layout_gravity="right"
-                android:layout_marginTop="29dp"
-                android:layout_marginRight="24dp"/>
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="23dp"
+                    android:src="@drawable/humo" />
 
+                <ImageView
+                    android:id="@+id/shareKurs"
+                    android:layout_width="20dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="29dp"
+                    android:layout_marginEnd="24dp"
+                    android:src="@drawable/share" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="#FFFFFF"
-                    android:layout_marginTop="73dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Самый выгодный курс по переводам"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:fontFamily="@font/sfuitext_light"
-                android:layout_marginTop="86dp"
-                android:layout_marginHorizontal="39dp"/>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#FFFFFF"
-                android:layout_marginTop="128dp"
-                />
+                    android:layout_marginTop="73dp"
+                    android:background="#1FFFFFFF" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1000 RUB"
-                    android:textSize="24sp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="86dp"
+                    android:fontFamily="@font/sfuitext_light"
+                    android:text="Самый выгодный курс по переводам"
                     android:textColor="#FFFFFF"
-                    android:textStyle="bold"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="128dp"
+                    android:background="#1FFFFFFF" />
+                <!--Расположи в Linear и дай вес-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="154dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="7dp" />
-                
-                <ImageView
-                    android:layout_width="28dp"
-                    android:layout_height="22dp"
-                    android:src="@drawable/export"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginStart="139dp"
-                    android:layout_marginTop="159dp"/>
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="125 TJS"
-                android:textSize="24sp"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:layout_marginTop="155dp"
-                android:layout_marginStart="177dp"
-                android:layout_marginEnd="20dp" />
+                    <TextView
+                        android:id="@+id/kursRubHumo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_pro_display"
+                        android:gravity="center"
+                        android:text="1000 RUB"
+                        android:textColor="#FFFFFF"
+                        android:textSize="24sp" />
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="22dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:gravity="center"
+                        android:src="@drawable/export" />
+
+                    <TextView
+                        android:id="@+id/kursRubNumoConverter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_pro_display"
+                        android:gravity="center"
+                        android:text="125.000 TJS"
+                        android:textColor="#FFFFFF"
+                        android:textSize="24sp" />
+
+                </LinearLayout>
 
 
-            <Button
+                <Button
+                    android:id="@+id/converterKurs"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="224dp"
+                    android:layout_marginBottom="11dp"
+                    android:backgroundTint="#1FFFFFFF"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="Ковертировать по этому курсу"
+                    android:textSize="14sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:backgroundTint="#66BEA1"
-                android:text="Ковертировать по этому курсу"
-                android:textStyle="bold"
-                android:textSize="14sp"
-                android:layout_marginTop="224dp"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginBottom="11dp"/>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:listitem="@layout/item_bank"
-            android:overScrollMode="never"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            android:id="@+id/recyclerView"/>
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_bank" />
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>

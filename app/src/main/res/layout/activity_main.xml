@@ -13,7 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:defaultNavHost="true"
-        app:navGraph="@navigation/nav_graph"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/view" />
 
@@ -27,12 +26,14 @@
         android:id="@+id/bottom_nav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:backgroundTint="#fff"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:background="?android:attr/windowBackground"
+        app:backgroundTint="#fff"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottom_nav"
-        app:itemIconTint="#217FBC"
-        app:itemTextColor="#217FBC" />
+        app:itemIconTint="@color/nav_bottom_color"
+        app:itemTextColor="@color/nav_bottom_color"
+        app:itemActiveIndicatorStyle="@color/white"        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

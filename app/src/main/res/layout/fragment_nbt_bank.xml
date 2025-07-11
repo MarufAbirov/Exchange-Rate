@@ -49,6 +49,7 @@
 
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/converNBT"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:backgroundTint="#EBF0ED"
@@ -99,7 +100,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="EUR"
+                    android:text="RUB"
                     android:textSize="22sp"
                     android:fontFamily="@font/sf_pro_display"
                     android:layout_marginTop="24dp"
@@ -108,12 +109,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Европейское евро"
+                    android:text="Российское рубль"
                     android:textSize="12sp"
                     android:fontFamily="@font/sfuitext_light"
                     android:layout_marginTop="46dp"
                     android:layout_marginStart="64dp"/>
                 <TextView
+                    android:id="@+id/nbtRub"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="430943 TJS"
@@ -155,6 +157,7 @@
                     android:layout_marginTop="117dp"
                     android:layout_marginStart="64dp"/>
                 <TextView
+                    android:id="@+id/nbtUsd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="66640946 TJS"
@@ -198,6 +201,7 @@
                     android:layout_marginTop="192dp"
                     android:layout_marginStart="64dp"/>
                 <TextView
+                    android:id="@+id/nbtEur"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="66640946 TJS"

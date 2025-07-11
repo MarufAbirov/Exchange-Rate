@@ -8,14 +8,41 @@
     <fragment
         android:id="@+id/favorableRateFragment"
         android:name="tj.app.kursvalyuta.FavorableRateFragment"
-        android:label="FavorableRateFragment" >
-        <action
+        android:label="Favorable Rate" >
+       <action
             android:id="@+id/action_favorableRateFragment_to_nbtBankFragment"
             app:destination="@id/nbtBankFragment" />
+        <action
+            android:id="@+id/action_favorableRateFragment_to_internalCoursePage"
+            app:destination="@+id/internalCoursePage"/>
+        <argument
+            android:name="humoBank"
+            app:argType="tj.app.kursvalyuta.model.BankData"
+           />
+
     </fragment>
     <fragment
         android:id="@+id/nbtBankFragment"
         android:name="tj.app.kursvalyuta.NbtBankFragment"
         android:label="fragment_nbt_bank"
-        tools:layout="@layout/fragment_nbt_bank" />
-</navigation>
+        tools:layout="@layout/fragment_nbt_bank" >
+        <argument
+            android:name="nbtBank"
+            app:argType="tj.app.kursvalyuta.model.BankData" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/internalCoursePage"
+        android:name="tj.app.kursvalyuta.InternalCoursePageFragment"
+        android:label="Internal Course Page"
+        tools:layout="@layout/fragment_internal_course_page">
+        <action
+            android:id="@+id/action_reload_self"
+            app:destination="@id/internalCoursePage" />
+        <argument
+            android:name="bankData"
+            app:argType="tj.app.kursvalyuta.model.BankData" />
+
+    </fragment>
+
+        </navigation>
